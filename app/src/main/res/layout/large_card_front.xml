@@ -17,6 +17,7 @@
             android:id="@+id/largePersonImage"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:scaleType="centerCrop"
             android:layout_gravity="center"
             android:src="@color/cardview_dark_background" />
     </androidx.cardview.widget.CardView>
@@ -26,9 +27,9 @@
         android:layout_marginTop="10dp">
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/largePersonFab"
-            android:elevation="5dp"
             app:fabCustomSize = "60dp"
             android:padding="5dp"
+            android:clickable="false"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <LinearLayout
@@ -39,6 +40,7 @@
                 android:id="@+id/largePersonName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
                 android:layout_margin="2dp"
                 android:text="Sample"
                 android:textSize="28sp"
@@ -48,6 +50,7 @@
                 android:id="@+id/largePersonYear"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
                 android:text="Sample"
                 android:textSize="24sp"
                 android:textColor="@color/black"

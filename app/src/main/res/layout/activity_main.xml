@@ -30,6 +30,8 @@
         <TextView
             android:id="@+id/chapterListTitle"
             android:text="SeniorApp"
+            android:fontFamily="sans-serif-condensed"
+            android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/white"

@@ -2,10 +2,10 @@
     "list": [
     {
         "id": 201,
-        "name": "James",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec maximus tellus. Aliquam ut egestas enim. Nunc varius consequat leo sed rutrum. Vestibulum sit amet tortor sit amet augue pellentesque ullamcorper.",
-        "type" : "electrical",
-        "year": 1,
+        "name": "Szabolcs",
+        "description": "In my free time I like to hike, play basketball or videogames, but most importantly I love to hang out with my friends. Professionally Im into Android and Web development. You can ask me questions about First year subjects, particularly Programming, and Digital Technics.",
+        "type" : "informatics",
+        "year": 5,
         "source": "en.JPG"
     },
     {

@@ -28,22 +28,11 @@ class MainActivity : AppCompatActivity() {
         }
         val enlargedView = findViewById<RelativeLayout>(R.id.enlargedViewHolder)
         enlargedView.visibility = View.GONE
-        val largeImg = findViewById<ImageView>(R.id.largePersonImage)
-        val largeName = findViewById<TextView>(R.id.largePersonName)
 
         val recyclerView = findViewById<View>(R.id.polaroidRV) as RecyclerView
         recyclerView.autoFitColumns(150)
         val adapter = PersonListAdapter(db.getPersons(), object : PersonListAdapter.OnItemClickListener {
             override fun onItemClick(item: Person?) {
-                try {
-                    if(item?.imgSource.equals("null"))
-                        largeImg.setImageBitmap(getBitmapFromAssets("Images/placeholder.jpg"))
-                    else
-                        largeImg.setImageBitmap(getBitmapFromAssets("Images/"+item?.imgSource))
-                }
-                catch (e: Exception) {
-                    e.printStackTrace()
-                }
                 if (item != null) {
                     enlargedView.alpha = 0f
                     enlargedView.visibility = View.VISIBLE
@@ -77,13 +66,5 @@ class MainActivity : AppCompatActivity() {
         val displayMetrics = this.context.resources.displayMetrics
         val noOfColumns = ((displayMetrics.widthPixels / displayMetrics.density) / columnWidth).toInt()
         this.layoutManager = GridLayoutManager(this.context, noOfColumns)
-    }
-
-    private fun getBitmapFromAssets(fileName: String?): Bitmap? {
-        val assetManager = assets
-        val istr: InputStream = assetManager.open(fileName!!)
-        val bitmap = BitmapFactory.decodeStream(istr)
-        istr.close()
-        return bitmap
     }
 }
