@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/darkBlue">
+        <ImageView
+            android:id="@+id/changeProjectBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_baseline_add_36"
+            android:layout_gravity="right"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"/>
+        <ImageView
+            android:id="@+id/openDrawerBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_baseline_menu_24"
+            android:layout_gravity="left"
+            android:paddingRight="15dp"
+            android:paddingLeft="5dp"
+            android:layout_marginLeft="0dp"/>
+        <TextView
+            android:id="@+id/chapterListTitle"
+            android:text="SeniorApp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_gravity="center" />
+    </androidx.appcompat.widget.Toolbar>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/polaroidRV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/cardview" />
+        <RelativeLayout
+            android:id="@+id/enlargedViewHolder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparentBlack">
+            <FrameLayout
+                android:id="@+id/container"
+                android:layout_width="350dp"
+                android:layout_height="450dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true">
+            </FrameLayout>
+        </RelativeLayout>
+    </FrameLayout>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
